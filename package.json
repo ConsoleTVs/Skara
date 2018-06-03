@@ -1,0 +1,37 @@
+{
+  "name": "skara",
+  "version": "1.0.0",
+  "description": "Tailwind & Vue administration panel",
+  "author": "Erik Campobadal <soc@erik.cat>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "build-spa": "nuxt build --spa",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "chart.js": "^2.7.2",
+    "feather-icons": "^4.7.3",
+    "js-search": "^1.4.2",
+    "nuxt": "^1.4.0",
+    "vue-chartjs": "^3.3.1",
+    "vue-feather-icons": "^4.7.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.5.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
+    "tailwindcss": "^0.4.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

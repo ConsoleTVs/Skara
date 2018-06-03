@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700');
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, you should import this line from it's own file:
+ *
+ * @import "./tailwind-preflight.css";
+ *
+ * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+ */
+ @tailwind preflight;
+
+ /**
+  * Here you would add any of your custom component classes; stuff that you'd
+  * want loaded *before* the utilities so that the utilities could still
+  * override them.
+  *
+  * Example:
+  *
+  * .btn { ... }
+  * .form-input { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "components/buttons";
+  * @import "components/forms";
+  */
+
+* {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+ /**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file.
+  *
+  * If using `postcss-import`, you should import this line from it's own file:
+  *
+  * @import "./tailwind-utilities.css";
+  *
+  * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+  */
+ @tailwind utilities;
+
+ /**
+  * Here you would add any custom utilities you need that don't come out of the
+  * box with Tailwind.
+  *
+  * Example :
+  *
+  * .bg-pattern-graph-paper { ... }
+  * .skew-45 { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "utilities/background-patterns";
+  * @import "utilities/skew-transforms";
+  */
+.card {
+    @apply .rounded .shadow-md .mb-4;
+}
+.card > .card-header {
+    @apply .py-4 .px-6 .uppercase .tracking-wide .text-base .text-grey-darker .border-b .border-grey-light;
+}
+.card > .card-body {
+    @apply .py-8 .px-6;
+}
+
+.page-enter-active, .page-leave-active, .transitioner {
+    transition: all 0.35s ease;
+}
+.page-enter {
+    transform: translateX(25px);
+    opacity: 0;
+}
+.page-leave-to {
+    transform: translateX(-25px);
+    opacity: 0;
+}
+.initial-state {
+    opacity: 0;
+    transform: translateX(25px);
+}
