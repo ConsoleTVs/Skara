@@ -27,7 +27,7 @@ module.exports = {
         '@/plugins/Charts',
         {
             ssr: false,
-            src: '@plugins/appear'
+            src: '@plugins/Appear'
         }
     ],
 
